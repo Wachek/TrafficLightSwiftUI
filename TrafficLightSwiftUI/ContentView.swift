@@ -13,16 +13,20 @@ struct ContentView: View {
             Color(.black)
                 .ignoresSafeArea()
             VStack {
-                CircleView(color: .red)
-                CircleView(color: .yellow)
-                CircleView(color: .green)
+                VStack {
+                    CircleView(color: .red)
+                    CircleView(color: .yellow)
+                    CircleView(color: .green)
+                }
+                .padding()
+                Spacer()
+                StartButtonView()
             }
-            
-            .padding()
-            Spacer()
         }
     }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
