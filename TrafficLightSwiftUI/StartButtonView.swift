@@ -13,14 +13,14 @@ struct StartButtonView: View {
             Text("START")
                 .font(.title)
                 .fontWeight(.bold)
-                .border(Color.white, width: 4)
-                .cornerRadius(40)
+                .padding(10)
                 .background(Color.blue)
                 .foregroundColor(.white)
-          
+                .cornerRadius(40)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 40)
+                        .stroke(Color.white, lineWidth: 4))
         }
-        
-//        .frame(width: 150, height: 50)
     }
 }
 
