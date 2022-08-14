@@ -13,13 +13,66 @@ enum CurrentLight {
 
 struct ContentView: View {
     
-    @State private var redCircle = CircleView(color: .red, grayscale: 0.4, brightness: -0.6)
-    @State private var yellowCircle = CircleView(color: .yellow, grayscale: 0.4, brightness: -0.6)
-    @State private var greenCircle = CircleView(color: .green, grayscale: 0.4, brightness: -0.6)
+    @State private var redCircle = CircleView(
+        color: .red,
+        grayscale: 0.4,
+        brightness: -0.6
+    )
+    @State private var yellowCircle = CircleView(
+        color: .yellow,
+        grayscale: 0.4,
+        brightness: -0.6
+    )
+    @State private var greenCircle = CircleView(
+        color: .green,
+        grayscale: 0.4,
+        brightness: -0.6
+    )
     
     @State private var currentLight = CurrentLight.red
     
     @State private var buttonText: String = "START"
+    
+    private func changeColor() {
+        switch currentLight {
+        case .red:
+            greenCircle = CircleView(
+                color: .green,
+                grayscale: 0.4,
+                brightness: -0.6
+            )
+            redCircle = CircleView(
+                color: .red,
+                grayscale: 0,
+                brightness: 0
+            )
+            currentLight = CurrentLight.yellow
+        case .yellow:
+            redCircle = CircleView(
+                color: .red,
+                grayscale: 0.4,
+                brightness: -0.6
+            )
+            yellowCircle = CircleView(
+                color: .yellow,
+                grayscale: 0,
+                brightness: 0
+            )
+            currentLight = CurrentLight.green
+        case .green:
+            yellowCircle = CircleView(
+                color: .yellow,
+                grayscale: 0.4,
+                brightness: -0.6
+            )
+            greenCircle = CircleView(
+                color: .green,
+                grayscale: 0,
+                brightness: 0
+            )
+            currentLight = CurrentLight.red
+        }
+    }
     
     var body: some View {
         ZStack {
@@ -37,20 +90,8 @@ struct ContentView: View {
                     
                     buttonText = "NEXT"
                     
-                        switch currentLight {
-                        case .red:
-                            greenCircle = CircleView(color: .green, grayscale: 0.4, brightness: -0.6)
-                            redCircle = CircleView(color: .red, grayscale: 0, brightness: 0)
-                            currentLight = CurrentLight.yellow
-                        case .yellow:
-                            redCircle = CircleView(color: .red, grayscale: 0.4, brightness: -0.6)
-                            yellowCircle = CircleView(color: .yellow, grayscale: 0, brightness: 0)
-                            currentLight = CurrentLight.green
-                        case .green:
-                            yellowCircle = CircleView(color: .yellow, grayscale: 0.4, brightness: -0.6)
-                            greenCircle = CircleView(color: .green, grayscale: 0, brightness: 0)
-                            currentLight = CurrentLight.red
-                        }
+                    changeColor()
+
                 }) {
                     Text(buttonText)
                         .font(.title)
