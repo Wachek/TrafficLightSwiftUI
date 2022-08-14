@@ -10,12 +10,14 @@ import SwiftUI
 struct CircleView: View {
     
     let color: Color
+    let grayscale: Double
+    let brightness: Double
     
     var body: some View {
         Circle()
             .foregroundColor(color)
-            .grayscale(0.6)
-            .brightness(-0.4)
+            .grayscale(grayscale)
+            .brightness(brightness)
             .frame(width: 100, height: 100)
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
     }
@@ -23,6 +25,6 @@ struct CircleView: View {
 
 struct CircleView_Previews: PreviewProvider {
     static var previews: some View {
-        CircleView(color: .green)
+        CircleView(color: .red, grayscale: 0.4, brightness: -0.6)
     }
 }

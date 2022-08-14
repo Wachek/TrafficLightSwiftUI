@@ -12,7 +12,6 @@
 		8BFF18BA28A6D327006409DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BFF18B928A6D327006409DB /* Assets.xcassets */; };
 		8BFF18BD28A6D327006409DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BFF18BC28A6D327006409DB /* Preview Assets.xcassets */; };
 		8BFF18C428A6D547006409DB /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFF18C328A6D547006409DB /* CircleView.swift */; };
-		8BFF18C628A6DFCF006409DB /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFF18C528A6DFCF006409DB /* StartButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +21,6 @@
 		8BFF18B928A6D327006409DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BFF18BC28A6D327006409DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8BFF18C328A6D547006409DB /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		8BFF18C528A6DFCF006409DB /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +55,6 @@
 			children = (
 				8BFF18B528A6D320006409DB /* TrafficLightSwiftUIApp.swift */,
 				8BFF18B728A6D320006409DB /* ContentView.swift */,
-				8BFF18C528A6DFCF006409DB /* StartButtonView.swift */,
 				8BFF18C328A6D547006409DB /* CircleView.swift */,
 				8BFF18B928A6D327006409DB /* Assets.xcassets */,
 				8BFF18BB28A6D327006409DB /* Preview Content */,
@@ -144,7 +141,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BFF18C428A6D547006409DB /* CircleView.swift in Sources */,
-				8BFF18C628A6DFCF006409DB /* StartButtonView.swift in Sources */,
 				8BFF18B828A6D320006409DB /* ContentView.swift in Sources */,
 				8BFF18B628A6D320006409DB /* TrafficLightSwiftUIApp.swift in Sources */,
 			);
